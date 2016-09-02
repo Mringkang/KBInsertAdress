@@ -26,7 +26,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="电话号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OUu-BD-0WL">
-                                <rect key="frame" x="200" y="152" width="200" height="30"/>
+                                <rect key="frame" x="200" y="118" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="R6j-7c-biK"/>
                                 </constraints>
@@ -34,7 +34,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IH-M2-Blt">
-                                <rect key="frame" x="250" y="260" width="100" height="30"/>
+                                <rect key="frame" x="250" y="168" width="100" height="30"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.70196078429999997" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="EgS-l2-V9L"/>
@@ -47,8 +47,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.87450980389999999" green="0.87058823529999996" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="OUu-BD-0WL" firstAttribute="top" secondItem="7YA-Ak-kgh" secondAttribute="bottom" constant="54" id="0Eu-lx-zA9"/>
-                            <constraint firstItem="4IH-M2-Blt" firstAttribute="top" secondItem="OUu-BD-0WL" secondAttribute="bottom" constant="78" id="7Gq-Dr-CEk"/>
+                            <constraint firstItem="OUu-BD-0WL" firstAttribute="top" secondItem="7YA-Ak-kgh" secondAttribute="bottom" constant="20" id="0Eu-lx-zA9"/>
+                            <constraint firstItem="4IH-M2-Blt" firstAttribute="top" secondItem="OUu-BD-0WL" secondAttribute="bottom" constant="20" id="7Gq-Dr-CEk"/>
                             <constraint firstItem="7YA-Ak-kgh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="YEj-46-W4y"/>
                             <constraint firstItem="7YA-Ak-kgh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fDu-oE-fE9"/>
                             <constraint firstItem="4IH-M2-Blt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jsk-mM-R0j"/>

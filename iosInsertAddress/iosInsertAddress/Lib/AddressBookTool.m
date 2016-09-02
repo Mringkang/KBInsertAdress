@@ -24,27 +24,7 @@
         return;
     }
 
-    if (IOS8) {
-        
-        CFErrorRef error = NULL;
-        ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, &error);
-        ABRecordRef newRecord = ABPersonCreate();
-        ABRecordSetValue(newRecord, kABPersonFirstNameProperty, (__bridge CFTypeRef)name, &error);
-        
-        ABMutableMultiValueRef multi = ABMultiValueCreateMutable(kABMultiStringPropertyType);
-        ABMultiValueAddValueAndLabel(multi, (__bridge CFTypeRef)phoneNum, kABPersonPhoneMobileLabel, NULL);
-        ABRecordSetValue(newRecord, kABPersonPhoneProperty, multi, &error);
-        CFRelease(multi);
-        
-        ABAddressBookAddRecord(addressBook, newRecord, &error);
-        
-        ABAddressBookSave(addressBook, &error);
-        CFRelease(newRecord);
-        CFRelease(addressBook);
-        
-        NSLog(@"ios8");
-        
-    }else if (IOS9){
+    if (IOS9){
     
         NSLog(@"ios9");
         CNMutableContact * contact = [[CNMutableContact alloc]init];
@@ -63,17 +43,14 @@
     
     }else{
         
-        NSLog(@"ios7");
-       
+        NSLog(@"其他");
         CFErrorRef error = NULL;
-        
         ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, &error);
         ABRecordRef newRecord = ABPersonCreate();
         ABRecordSetValue(newRecord, kABPersonFirstNameProperty, (__bridge CFTypeRef)name, &error);
         
         ABMutableMultiValueRef multi = ABMultiValueCreateMutable(kABMultiStringPropertyType);
-        ABMultiValueAddValueAndLabel(multi, (__bridge CFTypeRef)name, kABPersonPhoneMobileLabel, NULL);
-        
+        ABMultiValueAddValueAndLabel(multi, (__bridge CFTypeRef)phoneNum, kABPersonPhoneMobileLabel, NULL);
         ABRecordSetValue(newRecord, kABPersonPhoneProperty, multi, &error);
         CFRelease(multi);
         
@@ -82,7 +59,6 @@
         ABAddressBookSave(addressBook, &error);
         CFRelease(newRecord);
         CFRelease(addressBook);
-        
     
     
     }
