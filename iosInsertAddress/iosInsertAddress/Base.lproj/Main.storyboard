@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入名字" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7YA-Ak-kgh">
+                                <rect key="frame" x="201" y="68" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hOf-D7-fR2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="电话号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OUu-BD-0WL">
+                                <rect key="frame" x="200" y="152" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="R6j-7c-biK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IH-M2-Blt">
+                                <rect key="frame" x="250" y="260" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.70196078429999997" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="EgS-l2-V9L"/>
+                                </constraints>
+                                <state key="normal" title="插入"/>
+                                <connections>
+                                    <action selector="insert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VcC-s8-iSD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.87058823529999996" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OUu-BD-0WL" firstAttribute="top" secondItem="7YA-Ak-kgh" secondAttribute="bottom" constant="54" id="0Eu-lx-zA9"/>
+                            <constraint firstItem="4IH-M2-Blt" firstAttribute="top" secondItem="OUu-BD-0WL" secondAttribute="bottom" constant="78" id="7Gq-Dr-CEk"/>
+                            <constraint firstItem="7YA-Ak-kgh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="YEj-46-W4y"/>
+                            <constraint firstItem="7YA-Ak-kgh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fDu-oE-fE9"/>
+                            <constraint firstItem="4IH-M2-Blt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jsk-mM-R0j"/>
+                            <constraint firstItem="OUu-BD-0WL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zXw-lc-BI4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="phoneNum" destination="OUu-BD-0WL" id="LgI-K8-5hK"/>
+                        <outlet property="textName" destination="7YA-Ak-kgh" id="FrZ-dH-Hsa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
